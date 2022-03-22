@@ -1,10 +1,10 @@
-baseURL = "https://ublogger.netlify.app/"
+baseURL = "https://example.com"
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "en"
 # theme
 # 主题
-theme = "UBlogger"
+theme = "LoveIt"
 # themes directory
 # 主题目录
 # themesDir = "../.."
@@ -34,6 +34,8 @@ enableEmoji = true
     hasCJKLanguage = false
     # default amount of posts in each pages
     paginate = 12
+    # [UA-XXXXXXXX-X] google analytics code
+    googleAnalytics = ""
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # Menu config
@@ -86,12 +88,12 @@ enableEmoji = true
         pre = "<i class='fab fa-github fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/upagge/ublogger"
+        url = "https://github.com/dillonzq/LoveIt"
         title = "GitHub"
         weight = 6
     [languages.en.params]
       # site description
-      description = "Joylynn's Blog"
+      description = "About LoveIt Theme"
       # site keywords
       keywords = ["Theme", "Hugo"]
       # App icon config
@@ -141,9 +143,11 @@ enableEmoji = true
           # URL of avatar shown in home page
           avatarURL = "/images/avatar.png"
           # title shown in home page (HTML format is supported)
-          title = "Joylynn's Blog"
-          # subtitle shown in home page (HTML format is supported)
-          subtitle = "It's time to change."
+          title = ""
+          # subtitle shown in home page
+          subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+          # whether to use typeit animation for subtitle
+          typeit = true
           # whether to show social links
           social = true
           # disclaimer (HTML format is supported)
@@ -217,14 +221,11 @@ enableEmoji = true
         Matrix = ""
         Bilibili = ""
         Email = "xxxx@xxxx.com"
-        DockerHub = ""
-        Discord = "xxxxxxxxx"
-        Leanpub = ""
-        Udemy = ""
         RSS = true
         [languages.en.params.social.Mastodon]
           id = "@xxxx"
           prefix = "https://mastodon.technology/"
+
   [languages.zh-cn]
     weight = 2
     # 网站语言, 仅在这里 CN 大写
@@ -292,7 +293,7 @@ enableEmoji = true
         weight = 6
     [languages.zh-cn.params]
       # 网站描述
-      description = "Joylynn's Blog"
+      description = "关于 LoveIt 主题"
       # 网站关键词
       keywords = ["Theme", "Hugo"]
       # 应用图标配置
@@ -342,9 +343,9 @@ enableEmoji = true
           # 主页显示头像的 URL
           avatarURL = "/images/avatar.png"
           # 主页显示的网站标题 (支持 HTML 格式)
-          title = "Joylynn's Blog"
+          title = ""
           # 主页显示的网站副标题
-          subtitle = "It's time to change."
+          subtitle = "一个简洁、优雅且高效的 Hugo 主题"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号
@@ -423,14 +424,212 @@ enableEmoji = true
         Email = "xxxx@xxxx.com"
         RSS = true
 
+  [languages.fr]
+    weight = 3
+    # language code
+    languageCode = "fr"
+    # language name
+    languageName = "Français"
+    # whether to include Chinese/Japanese/Korean
+    hasCJKLanguage = false
+    # default amount of posts in each pages
+    paginate = 12
+    # [UA-XXXXXXXX-X] google analytics code
+    googleAnalytics = ""
+    # copyright description used only for seo schema
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    # Menu config
+    [languages.fr.menu]
+      [[languages.fr.menu.main]]
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Postes"
+        url = "/posts/"
+        title = ""
+        weight = 1
+      [[languages.fr.menu.main]]
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Balises"
+        url = "/tags/"
+        title = ""
+        weight = 2
+      [[languages.fr.menu.main]]
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Catégories"
+        url = "/categories/"
+        title = ""
+        weight = 3
+      [[languages.fr.menu.main]]
+        identifier = "documentation"
+        pre = ""
+        post = ""
+        name = "Docs"
+        url = "/categories/documentation/"
+        title = ""
+        weight = 4
+      [[languages.fr.menu.main]]
+        identifier = "about"
+        pre = ""
+        name = "À propos"
+        url = "/about/"
+        title = ""
+        weight = 5
+      [[languages.fr.menu.main]]
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/dillonzq/LoveIt"
+        title = "GitHub"
+        weight = 6
+    [languages.fr.params]
+      # site description
+      description = "À propos du thème LoveIt"
+      # site keywords
+      keywords = ["Thème", "Hugo"]
+      # App icon config
+      [languages.fr.params.app]
+        # optional site title override for the app when added to an iOS home screen or Android launcher
+        title = "LoveIt"
+        # whether to omit favicon resource links
+        noFavicon = false
+        # modern SVG favicon to use in place of older style .png and .ico files
+        svgFavicon = ""
+        # Android browser theme color
+        themeColor = "#ffffff"
+        # Safari mask icon color
+        iconColor = "#5bbad5"
+        # Windows v8-10 tile color
+        tileColor = "#da532c"
+      # Search config
+      [languages.fr.params.search]
+        enable = true
+        # type of search engine ("lunr", "algolia")
+        type = "algolia"
+        # max index length of the chunked content
+        contentLength = 4000
+        # placeholder of the search bar
+        placeholder = ""
+        # max number of results length
+        maxResultLength = 10
+        # snippet length of the result
+        snippetLength = 30
+        # HTML tag name of the highlight part in results
+        highlightTag = "em"
+        # whether to use the absolute URL based on the baseURL in search index
+        absoluteURL = false
+        [languages.fr.params.search.algolia]
+          index = "index.fr"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+      # Home page config
+      [languages.fr.params.home]
+        # amount of RSS pages
+        rss = 10
+        # Home page profile
+        [languages.fr.params.home.profile]
+          enable = true
+          # Gravatar Email for preferred avatar in home page
+          gravatarEmail = ""
+          # URL of avatar shown in home page
+          avatarURL = "/images/avatar.png"
+          # title shown in home page (HTML format is supported)
+          title = ""
+          # subtitle shown in home page
+          subtitle = "Un thème Hugo simple, élégant et efficace"
+          # whether to use typeit animation for subtitle
+          typeit = true
+          # whether to show social links
+          social = true
+          # disclaimer (HTML format is supported)
+          disclaimer = ""
+        # Home page posts
+        [languages.fr.params.home.posts]
+          enable = true
+          # special amount of posts in each home posts page
+          paginate = 6
+      # Social config in home page
+      [languages.fr.params.social]
+        GitHub = "xxxx"
+        Linkedin = "xxxx"
+        Twitter = "xxxx"
+        Instagram = ""
+        Facebook = ""
+        Telegram = ""
+        Medium = ""
+        Gitlab = ""
+        Youtubelegacy = ""
+        Youtubecustom = ""
+        Youtubechannel = ""
+        Tumblr = ""
+        Quora = ""
+        Keybase = ""
+        Pinterest = ""
+        Reddit = ""
+        Codepen = ""
+        FreeCodeCamp = ""
+        Bitbucket = ""
+        Stackoverflow = ""
+        Weibo = ""
+        Odnoklassniki = ""
+        VK = ""
+        Flickr = ""
+        Xing = ""
+        Snapchat = "xxxx"
+        Soundcloud = ""
+        Spotify = ""
+        Bandcamp = ""
+        Paypal = ""
+        Fivehundredpx = ""
+        Mix = ""
+        Goodreads = ""
+        Lastfm = ""
+        Foursquare = ""
+        Hackernews = "xxxx"
+        Kickstarter = ""
+        Patreon = ""
+        Steam = ""
+        Twitch = ""
+        Strava = ""
+        Skype = ""
+        Whatsapp = ""
+        Zhihu = ""
+        Douban = ""
+        Angellist = ""
+        Slidershare = ""
+        Jsfiddle = ""
+        Deviantart = ""
+        Behance = ""
+        Dribbble = "xxxx"
+        Wordpress = ""
+        Vine = ""
+        Googlescholar = ""
+        Researchgate = ""
+        Mastodon = ""
+        Thingiverse = ""
+        Devto = ""
+        Gitea = ""
+        XMPP = ""
+        Matrix = ""
+        Bilibili = ""
+        Email = "xxxx@xxxx.com"
+        RSS = true
+
 [params]
-  # uBlogger theme version
-  version = "2.0.X"
+  # LoveIt theme version
+  # LoveIt 主题版本
+  version = "0.2.X"
   # site default theme ("light", "dark", "auto")
+  # 网站默认主题 ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/upagge/dolboblog-theme"
+  gitRepo = "https://github.com/dillonzq/LoveIt"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -461,10 +660,13 @@ enableEmoji = true
       name = "Joylynn's Blog"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='fas fa-pencil-alt fa-fw'></i>"
+      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
+      # whether to use typeit animation for title name
+      # 是否为标题显示打字机动画
+      typeit = false
 
   # Footer config
   # 页面底部信息配置
@@ -484,7 +686,7 @@ enableEmoji = true
     author = true
     # site creation time
     # 网站创立年份
-    since = 2022
+    since = 2019
     # ICP info only in China (HTML format is supported)
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
@@ -518,90 +720,6 @@ enableEmoji = true
     # RSS 文章数目
     rss = 10
 
-  # Comment config
-  # 评论系统设置
-  [params.comment]
-    enable = true
-    [params.comment.remark42]
-      enable = true
-      host = "https://comments.upagge.ru"
-      site = "documentation"
-      locale = "en"
-    # Disqus comment config (https://disqus.com/)
-    # Disqus 评论系统设置 (https://disqus.com/)
-    [params.comment.disqus]
-      enable = false
-      # Disqus shortname to use Disqus in posts
-      # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-      shortname = ""
-    # Gitalk comment config (https://github.com/gitalk/gitalk)
-    # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-    [params.comment.gitalk]
-      enable = false
-      owner = ""
-      repo = ""
-      clientId = ""
-      clientSecret = ""
-    # Valine comment config (https://github.com/xCss/Valine)
-    # Valine 评论系统设置 (https://github.com/xCss/Valine)
-    [params.comment.valine]
-      enable = false
-      appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-      appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
-      placeholder = ""
-      avatar = "mp"
-      meta= ""
-      pageSize = 10
-      lang = ""
-      visitor = true
-      recordIP = true
-      highlight = true
-      enableQQ = false
-      serverURLs = "https://"
-      # emoji data file name, default is "google.yml"
-      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-      # located in "themes/uBlogger/assets/data/emoji/" directory
-      # you can store your own data files in the same path under your project:
-      # "assets/data/emoji/"
-      # emoji 数据文件名称, 默认是 "google.yml"
-      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-      # 位于 "themes/uBlogger/assets/data/emoji/" 目录
-      # 可以在你的项目下相同路径存放你自己的数据文件:
-      # "assets/data/emoji/"
-      emoji = ""
-    # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-    # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-    [params.comment.facebook]
-      enable = false
-      width = "100%"
-      numPosts = 10
-      appId = ""
-      languageCode = ""
-    # Telegram comments config (https://comments.app/)
-    # Telegram comments 评论系统设置 (https://comments.app/)
-    [params.comment.telegram]
-      enable = false
-      siteID = ""
-      limit = 5
-      height = ""
-      color = ""
-      colorful = true
-      dislikes = false
-      outlined = false
-    # Commento comment config (https://commento.io/)
-    # Commento comment 评论系统设置 (https://commento.io/)
-    [params.comment.commento]
-      enable = false
-    # Utterances comment config (https://utteranc.es/)
-    # Utterances comment 评论系统设置 (https://utteranc.es/)
-    [params.comment.utterances]
-      enable = false
-      # owner/repo
-      repo = ""
-      issueTerm = "pathname"
-      label = ""
-      lightTheme = "github-light"
-      darkTheme = "github-dark"
   # Page config
   # 文章页面配置
   [params.page]
@@ -614,6 +732,9 @@ enableEmoji = true
     # whether to enable twemoji
     # 是否使用 twemoji
     twemoji = false
+    # whether to enable lightgallery
+    # 是否使用 lightgallery
+    lightgallery = false
     # whether to enable the ruby extended syntax
     # 是否使用 ruby 扩展语法
     ruby = true
@@ -723,7 +844,85 @@ enableEmoji = true
       Skype = false
       Trello = false
       Mix = false
-
+    # Comment config
+    # 评论系统设置
+    [params.page.comment]
+      enable = true
+      # Disqus comment config (https://disqus.com/)
+      # Disqus 评论系统设置 (https://disqus.com/)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus shortname to use Disqus in posts
+        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+        shortname = ""
+      # Gitalk comment config (https://github.com/gitalk/gitalk)
+      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # Valine comment config (https://github.com/xCss/Valine)
+      # Valine 评论系统设置 (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = true
+        appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
+        appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
+        placeholder = ""
+        avatar = "mp"
+        meta= ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = "https://leancloud.hugoloveit.com"
+        # emoji data file name, default is "google.yml"
+        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # located in "themes/LoveIt/assets/data/emoji/" directory
+        # you can store your own data files in the same path under your project:
+        # "assets/data/emoji/"
+        # emoji 数据文件名称, 默认是 "google.yml"
+        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # 位于 "themes/LoveIt/assets/data/emoji/" 目录
+        # 可以在你的项目下相同路径存放你自己的数据文件:
+        # "assets/data/emoji/"
+        emoji = ""
+      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+      # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = ""
+      # Telegram comments config (https://comments.app/)
+      # Telegram comments 评论系统设置 (https://comments.app/)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      # Commento comment config (https://commento.io/)
+      # Commento comment 评论系统设置 (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
+      # Utterances comment config (https://utteranc.es/)
+      # Utterances comment 评论系统设置 (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
     # Third-party library config
     # 第三方库配置
     [params.page.library]
@@ -749,6 +948,22 @@ enableEmoji = true
         name = "xxxx"
         logoUrl = "/images/avatar.png"
 
+  # TypeIt config
+  # TypeIt 配置
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    # 每一步的打字速度 (单位是毫秒)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    # 光标的闪烁速度 (单位是毫秒)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    # 光标的字符 (支持 HTML 格式)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
+    duration = -1
+
   # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]
@@ -771,15 +986,10 @@ enableEmoji = true
   # Analytics config
   # 网站分析配置
   [params.analytics]
-    enable = true
+    enable = false
     # Google Analytics
     [params.analytics.google]
-      # [UA-XXXXXXXX-X] google analytics code
-      # [UA-XXXXXXXX-X] 谷歌分析代号
       id = ""
-      # whether to use gtag linked
-      # 是否使用gtag链接
-      gtag = false
       # whether to anonymize IP
       # 是否匿名化用户 IP
       anonymizeIP = true
@@ -789,8 +999,6 @@ enableEmoji = true
       # server url for your tracker if you're self hosting
       # 自行托管追踪器时的主机路径
       server = ""
-    [params.analytics.yandex]
-      id = "70532758"
 
   # Cookie consent config
   # Cookie 许可配置
@@ -808,12 +1016,12 @@ enableEmoji = true
   [params.cdn]
     # CDN data file name, disabled by default
     # ("jsdelivr.yml")
-    # located in "themes/uBlogger/assets/data/cdn/" directory
+    # located in "themes/LoveIt/assets/data/cdn/" directory
     # you can store your own data files in the same path under your project:
     # "assets/data/cdn/"
     # CDN 数据文件名称, 默认不启用
     # ("jsdelivr.yml")
-    # 位于 "themes/uBlogger/assets/data/cdn/" 目录
+    # 位于 "themes/LoveIt/assets/data/cdn/" 目录
     # 可以在你的项目下相同路径存放你自己的数据文件:
     # "assets/data/cdn/"
     data = "jsdelivr.yml"
@@ -838,6 +1046,8 @@ enableEmoji = true
     guessSyntax = true
     lineNos = true
     lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
   # Goldmark is from Hugo 0.60 the default library used for Markdown
   # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
@@ -863,7 +1073,9 @@ enableEmoji = true
 # Author config
 # 作者配置
 [author]
-  name = "upagge.en"
+  name = "xxxx"
+  email = ""
+  link = ""
 
 # Sitemap config
 # 网站地图配置
